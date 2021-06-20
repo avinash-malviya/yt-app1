@@ -15,8 +15,10 @@ const Header = ({ handleToggleSidebar }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    history.push(`/search/${input}`);
+    history.push(`/search/${input}`); 
   };
+
+  // const { photoURL } = useSelector((state) => state.auth?.user);
 
   return (
     <div className="header">
@@ -47,7 +49,7 @@ const Header = ({ handleToggleSidebar }) => {
       <div className="header_icons">
         <MdNotifications size={28} />
         <MdApps size={28} />
-        <img src="s" alt="avatar" />
+        <img src="" alt="avatar" />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import "./likedVideos.scss";
 const LikedVideos = () => {
   return (
     <div>
-      <h1>Liked Videos</h1>
+      <h1>My Liked Videos</h1>
     </div>
   );
 };
