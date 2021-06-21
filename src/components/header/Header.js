@@ -6,6 +6,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { MdNotifications, MdApps } from "react-icons/md";
 import { useHistory } from "react-router";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = ({ handleToggleSidebar }) => {
   const [input, setInput] = useState("");
@@ -15,7 +16,7 @@ const Header = ({ handleToggleSidebar }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    history.push(`/search/${input}`); 
+    history.push(`/search/${input}`);
   };
 
   // const { photoURL } = useSelector((state) => state.auth?.user);
@@ -27,12 +28,13 @@ const Header = ({ handleToggleSidebar }) => {
         size={26}
         onClick={() => handleToggleSidebar()}
       />
-
-      <img
-        src="https://clipart.info/images/ccovers/1590430652red-youtube-logo-png-xl.png"
-        alt=""
-        className="header_logo"
-      />
+      <Link to="/">
+        <img
+          src="https://clipart.info/images/ccovers/1590430652red-youtube-logo-png-xl.png"
+          alt=""
+          className="header_logo"
+        />
+      </Link>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -49,7 +51,10 @@ const Header = ({ handleToggleSidebar }) => {
       <div className="header_icons">
         <MdNotifications size={28} />
         <MdApps size={28} />
-        <img src="" alt="avatar" />
+        <img
+          src="https://lh6.googleusercontent.com/-_p3gXEMzy-s/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJN24UYviWGN1AM0XZQOusjvEBQcuQ/photo.jpg"
+          alt="avatar"
+        />
       </div>
     </div>
   );

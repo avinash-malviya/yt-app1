@@ -31,15 +31,15 @@ const Layout = ({ children }) => {
 };
 
 const App = () => {
-  const { accessToken, loading } = useSelector((state) => state.auth);
+  // const { accessToken, loading } = useSelector((state) => state.auth);
 
-  const history = useHistory();
+  // const history = useHistory();
 
-  useEffect(() => {
-    if (!loading && !accessToken) {
-      history.push("/auth");
-    }
-  }, [accessToken, loading, history]);
+  // useEffect(() => {
+  //   if (!loading && !accessToken) {
+  //     history.push("/auth");
+  //   }
+  // }, [accessToken, loading, history]);
 
   return (
     <Switch>
@@ -49,9 +49,9 @@ const App = () => {
         </Layout>
       </Route>
 
-      <Route path="/auth">
+      {/* <Route path="/auth">
         <LoginScreen />
-      </Route>
+      </Route> */}
 
       <Route path="/search/:query">
         <Layout>

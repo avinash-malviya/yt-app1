@@ -16,7 +16,7 @@ const Comments = ({ videoId, totalComments }) => {
 
   const comments = useSelector((state) => state.commentList.comments);
 
-  const { photoURL } = useSelector((state) => state.auth?.user);
+  // const { photoURL } = useSelector((state) => state.auth?.user);
 
   const [text, setText] = useState("");
 
@@ -35,8 +35,15 @@ const Comments = ({ videoId, totalComments }) => {
     <div className="comments">
       <p>{totalComments} Comments</p>
       <div className="comments_form d-flex w-100 my-2">
-        <img src={photoURL} alt="avatar" className="rounded-circle mr-3" />
-        <form onSubmit={handleComment} className="d-flex flex-grow-1">
+        <img
+          src="https://lh6.googleusercontent.com/-_p3gXEMzy-s/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJN24UYviWGN1AM0XZQOusjvEBQcuQ/photo.jpg"
+          alt="avatar"
+          className="rounded-circle mr-3"
+        />
+        <form
+          onSubmit={handleComment}
+          className="d-flex flex-grow-1 makecomment"
+        >
           <input
             type="text"
             className="flex-grow-1"
